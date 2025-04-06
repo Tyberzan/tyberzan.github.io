@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Blague Aléatoire</title>
+    <script>async function fetchRandomJoke() {
+            try {
+                const response = await fetch('http://localhost:10000/v2/blagues/random');
+                if (!response.ok) {
+                    throw new Error('Erreur lors de la récupération de la blague');
+                }
+                const joke = await response.json();
+                document.getElementById('jokeQuestion').innerText = joke.qts_Jokes;
+                document.getElementById('jokeAnswer').innerText = joke.ans_Jokes;
+            } catch (error) {
+                console.error('Erreur:', error);
+                document.getElementById('jokeQuestion').innerText = 'Erreur lors de la récupération de la blague';
+                document.getElementById('jokeAnswer').innerText = '';
+            }
+        }</script>
+</head>
+<body>
+    <h1>Blague Aléatoire</h1>
+    <button onclick="fetchRandomJoke()">Obtenir une blague</button>
+    <div>
+        <h2>Question :</h2>
+        <p id="jokeQuestion"></p>
+        <h2>Réponse :</h2>
+        <p id="jokeAnswer"></p>
+    </div>
+</body>
+</html>
