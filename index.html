@@ -7,14 +7,14 @@
             try {
                 const response = await fetch('https://cdaselectionproject.onrender.com/v2/blagues/random');
                 if (!response.ok) {
-                    throw new Error('Erreur lors de la récupération de la blague');
+                    throw new Error('Erreur lors de la récupération del requete GET /v2/blagues/random.');
                 }
                 const joke = await response.json();
                 document.getElementById('jokeQuestion').innerText = joke.qts_Jokes;
                 document.getElementById('jokeAnswer').innerText = joke.ans_Jokes;
             } catch (error) {
                 console.error('Erreur:', error);
-                document.getElementById('jokeQuestion').innerText = 'Erreur lors de la récupération de la blague';
+                document.getElementById('jokeQuestion').innerText = 'Erreur lors de la extraction du JSON.';
                 document.getElementById('jokeAnswer').innerText = '';
             }
         }</script>
