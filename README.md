@@ -40,13 +40,7 @@ Ce projet est une application web qui affiche des blagues aléatoires en utilisa
 
 ## Dépendances
 
-- express
-- body-parser
 - cors
-- sequelize
-- sqlite3
-- swagger-jsdoc
-- swagger-ui-express
 
 ## API
 
@@ -61,35 +55,7 @@ L'API backend fournit plusieurs endpoints pour gérer les blagues. Voici quelque
 
 Le serveur backend est configuré pour autoriser les requêtes provenant de `https://tyberzan.github.io` en utilisant le middleware `cors`.
 
-## Swagger
-
-L'API est documentée à l'aide de Swagger. Vous pouvez accéder à la documentation Swagger à l'URL suivante :
-
-
-## Dépendances
-
-- express
-- body-parser
-- cors
-- sequelize
-- sqlite3
-- swagger-jsdoc
-- swagger-ui-express
-
-## API
-
-L'API backend fournit plusieurs endpoints pour gérer les blagues. Voici quelques exemples :
-
-- `GET /v2/blagues/random` : Récupérer une blague aléatoire.
-- `POST /v2/AddJoke` : Ajouter une nouvelle blague.
-- `GET /v2/blagues/:id` : Récupérer une blague par ID.
-- `DELETE /v2/blagues/DeleteJoke/:id` : Supprimer une blague par ID.
-
-## Configuration CORS
-
-Le serveur backend est configuré pour autoriser les requêtes provenant de `https://tyberzan.github.io` en utilisant le middleware `cors`.
-
-## Swagger
+## SWAGGER
 
 L'API est documentée à l'aide de Swagger. Vous pouvez accéder à la documentation Swagger à l'URL suivante :
 
