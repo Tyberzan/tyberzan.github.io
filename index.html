@@ -5,7 +5,11 @@
     <title>Blague Aléatoire</title>
     <script>async function fetchRandomJoke() {
             try {
-                const response = await fetch('https://cdaselectionproject.onrender.com/v2/blagues/random');
+                const response = await fetch('https://cdaselectionproject.onrender.com/v2/blagues/random', { mode: 'no-cors' })
+                    
+                  .then(response => console.log(response))
+                  .catch(error => console.error(error));
+
                 if (!response.ok) {
                     throw new Error('Erreur lors de la récupération del requete GET /v2/blagues/random.');
                 }
